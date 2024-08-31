@@ -37,7 +37,10 @@ Before backing up to Time Machine
 - Check that asimov is running
 - Exclude virtual machine drives
 
-List exclusions: `sudo mdfind "com_apple_backup_excludeItem = 'com.apple.backupd'"`
+Check if a file or directory is excluded:
+```
+tmutil isexcluded <file/directory>
+```
 
 ## MacOS Defaults
 
