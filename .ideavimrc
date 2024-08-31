@@ -1,0 +1,15 @@
+let mapleader=","
+
+" EasyMotion
+Plug 'easymotion/vim-easymotion'
+map <leader>F <Plug>(easymotion-s)
+map <leader>f <Plug>(easymotion-f)
+map <leader>T <Plug>(easymotion-T)
+map <leader>t <Plug>(easymotion-f)
+
+" NERDTree
+Plug 'preservim/nerdtree'
+map <c-t>   :NERDTree<CR>
+
+Plug 'tpope/vim-commentary'
+Plug 'machakann/vim-highlightedyank'

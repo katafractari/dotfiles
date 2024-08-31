@@ -1,0 +1,9 @@
+mac_address: 39934594-E21B-9B0F-7FCF-F61E36318F9D
+scan_timeout: 5
+connection_timeout: 10
+adapter_name: hci0
+server_address: "127.0.0.1"
+server_port: 9123
+favourites:
+  sit: 780
+  stand: 1112

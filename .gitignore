@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+*.iml
+.idasen/linak-controller
+.hammerspoon/config.json
+.ssh
+.hammerspooon/config.json
+.gitconfig.*
