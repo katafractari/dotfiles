@@ -59,7 +59,7 @@ function getTravelTimeWithTraffic(origin, destination, apiKey)
         local color
         if durationInTraffic <= 1.05 * duration then
             color = "green" -- Low traffic
-        elseif durationInTraffic <= 1.2 * duration then
+        elseif durationInTraffic <= 1.15 * duration then
             color = "yellow" -- Moderate traffic
         else
             color = "red" -- High traffic
