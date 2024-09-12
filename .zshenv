@@ -19,3 +19,7 @@ alias assume=". assume"
 # Granted
 fpath=(~/.granted/zsh_autocomplete/assume/ $fpath)
 fpath=(~/.granted/zsh_autocomplete/granted/ $fpath)
+
+# Shortcuts
+alias lg='lazygit'
+alias ldo='lazydocker'
