@@ -70,4 +70,7 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export PATH=$HOME/.docker/bin:$PATH
 
 # Ruby 3
-export PATH="$HOME/.gem/ruby/3.3.0/bin:/opt/homebrew/opt/ruby/bin:$PATH"
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
