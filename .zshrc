@@ -54,10 +54,6 @@ source ~/Workspace/personal/dotfiles/aliases.zsh
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Google Cloud SDK
-source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-
 # Eza
 alias l='eza -1lF --icons -a --group-directories-first'
 
