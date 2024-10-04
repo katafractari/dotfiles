@@ -23,3 +23,4 @@ fpath=(~/.granted/zsh_autocomplete/granted/ $fpath)
 # Shortcuts
 alias lg='lazygit'
 alias ldo='lazydocker'
+alias qd='quarkus dev'
