@@ -33,6 +33,7 @@ else
 fi
 
 export PATH=$HOMEBREW_PREFIX/bin:$PATH
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Vi mode
 bindkey -v
