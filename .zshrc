@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit -i
+
 # Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -9,15 +12,19 @@ source ~/Workspace/personal/dotfiles/antigen.zsh
 antigen use oh-my-zsh
 
 # Antigen Bundles
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle Aloxaf/fzf-tab
+antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle git
 antigen bundle git-flow
 antigen bundle npm
 antigen bundle docker
 antigen bundle brew
 antigen bundle aws
+antigen bundle colored-man-pages
 antigen bundle lukechilds/zsh-nvm
 antigen bundle akarzim/zsh-docker-aliases.git
+antigen bundle MichaelAquilina/zsh-you-should-use
 
 # Antigen Theme
 antigen theme romkatv/powerlevel10k
@@ -71,3 +78,9 @@ if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 fi
+
+# zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
+
+# Zoxide
+eval "$(zoxide init zsh)"
