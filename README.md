@@ -21,37 +21,17 @@ sudo brew services start asimov
 ```
 ## ⦾ Commands
 
-### eza
-
-A better `ls`.
-
-### btop
-
-A better `htop`.
-
-### lazygit
-
-A git TUI.
-
-### lazydocker
-
-A docker TUI.
-
-### fastfetch
-
-Show pretty system information.
-
-### fd
-
-A better `find`.
-
-### rg
-
-A better `grep`.
-
-### nvim
-
-A better `vim`.
+| Name        | Description             |
+|-------------|-------------------------|
+| eza         | Better `ls`             |
+| btop        | Better `htop`           |
+| lazygit     | TUI for `git`           |
+| lazydocker  | TUI for `docker`        |
+| fastfetch   | Show pretty system info |
+| fd          | Better `find`           |
+| rg          | Better `grep`           |
+| nvim        | Better `vim`            |
+| fzf         | TUI for `grep`           |
 
 ## Special dotfiles
 
