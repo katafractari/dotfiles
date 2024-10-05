@@ -1,6 +1,11 @@
 autoload -Uz compinit
 compinit -i
 
+ZSH_DISABLE_COMPFIX=true
+
+# Editor
+export EDITOR='vim'
+
 # Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -50,7 +55,7 @@ export KEYTIMEOUT=1 # kill lag when toggling between modes
 LC_ALL=en_US.UTF-8
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # Aliases
 source ~/Workspace/personal/dotfiles/aliases.zsh
@@ -61,9 +66,6 @@ source ~/Workspace/personal/dotfiles/aliases.zsh
 # SDKMan
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Eza
-alias l='eza -1lF --icons -a --group-directories-first'
 
 # Go
 export GOPATH=$HOME/Workspace/go
@@ -84,3 +86,10 @@ bindkey '^ ' autosuggest-accept
 
 # Zoxide
 # eval "$(zoxide init zsh)"
+
+# Disable MacOS's "Save/Restore Shell State" feature
+export SHELL_SESSIONS_DISABLE=1
+
+# Granted
+fpath=(~/.granted/zsh_autocomplete/assume/ $fpath)
+fpath=(~/.granted/zsh_autocomplete/granted/ $fpath)
