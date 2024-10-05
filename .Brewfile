@@ -14,6 +14,14 @@ brew "pulumi"
 brew "awscli"
 brew "libpq"
 brew "tree"
+brew "eza"
+brew "btop"
+brew "lazygit"
+brew "lazydocker"
+brew "fastfetch"
+brew "fd"
+brew "ripgrep"
+brew "neovim"
 brew "zsh", args: ["HEAD"]
 brew "asimov", restart_service: true
 

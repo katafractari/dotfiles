@@ -19,6 +19,39 @@ cd dotfiles
 brew bundle --global
 sudo brew services start asimov
 ```
+## ⦾ Commands
+
+### eza
+
+A better `ls`.
+
+### btop
+
+A better `htop`.
+
+### lazygit
+
+A git TUI.
+
+### lazydocker
+
+A docker TUI.
+
+### fastfetch
+
+Show pretty system information.
+
+### fd
+
+A better `find`.
+
+### rg
+
+A better `grep`.
+
+### nvim
+
+A better `vim`.
 
 ## Special dotfiles
 
