@@ -83,4 +83,4 @@ fi
 bindkey '^ ' autosuggest-accept
 
 # Zoxide
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
