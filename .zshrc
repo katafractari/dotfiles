@@ -84,12 +84,21 @@ fi
 # zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 
-# Zoxide
-# eval "$(zoxide init zsh)"
-
 # Disable MacOS's "Save/Restore Shell State" feature
 export SHELL_SESSIONS_DISABLE=1
 
 # Granted
 fpath=(~/.granted/zsh_autocomplete/assume/ $fpath)
 fpath=(~/.granted/zsh_autocomplete/granted/ $fpath)
+
+# fzf-tab
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with eza when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1lF --color=always --icons -a --group-directories-first $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'

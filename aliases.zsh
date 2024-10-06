@@ -26,7 +26,7 @@ alias qd='quarkus dev'
 # cd to directory
 k() {
   local dir
-  dir=$(find ~/Workspace/kaldi -type d -mindepth 1 -maxdepth 1 | sort -r 2> /dev/null | fzf +m) &&
+  dir=$(find ~/Workspace/kaldi -type d -mindepth 1 -maxdepth 1 | sort -r 2> /dev/null | fzf +m --preview='eza -1lF --color=always --icons -a --group-directories-first {}') &&
   cd "$dir"
 }
 
