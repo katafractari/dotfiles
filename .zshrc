@@ -88,6 +88,7 @@ bindkey '^ ' autosuggest-accept
 export SHELL_SESSIONS_DISABLE=1
 
 # Granted
+alias assume=". assume"
 fpath=(~/.granted/zsh_autocomplete/assume/ $fpath)
 fpath=(~/.granted/zsh_autocomplete/granted/ $fpath)
 
