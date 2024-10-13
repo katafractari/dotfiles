@@ -79,4 +79,4 @@ local origin = hs.settings.get('config').travel.origin
 local destination = hs.settings.get('config').travel.destination
 local googleApiKey = hs.settings.get('config').travel.googleApiKey
 
-hs.hotkey.bind({ "alt" }, "h", function() getTravelTimeWithTraffic(origin, destination, googleApiKey) end)
+hs.hotkey.bind({"alt", "cmd", "shift"}, "t", function() getTravelTimeWithTraffic(origin, destination, googleApiKey) end)

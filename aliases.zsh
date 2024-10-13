@@ -21,7 +21,7 @@ alias n=npm
 alias ldo='lazydocker'
 
 # Quarkus
-alias qd='quarkus dev'
+alias q='quarkus'
 
 # cd to directory
 k() {
