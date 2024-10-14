@@ -7,7 +7,5 @@ require "src/bluetooth"
 require "src/idasen"
 require "src/travel"
 require "src/caffeinate"
-
--- Disable if AeroSpace is enabled
---require "src/apps"
---require "src/screens"
+require "src/apps"
+require "src/screens"
