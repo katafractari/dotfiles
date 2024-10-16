@@ -13,7 +13,8 @@ hyperShortcuts = {
     c = "WhatsApp",
     a = "Firefox",
     o = "Miro",
-    g = "ChatGPT"
+    g = "ChatGPT",
+    d = "1Password"
 --     h = "scrcpy"
 }
 
