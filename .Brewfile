@@ -21,6 +21,7 @@ brew "fastfetch"
 brew "fd"
 brew "ripgrep"
 brew "neovim"
+brew "gping"
 brew "zsh", args: ["HEAD"]
 brew "asimov", restart_service: true
 
