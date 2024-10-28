@@ -5,7 +5,7 @@ function positionApplication(app, screen, options)
     local windows = app:allWindows()
 
     for _, window in pairs(windows) do
-        window:moveToScreen(options.screen)
+        window:moveToScreen(screen)
 
         if options.position == nil then
             local newFrame = Resize:fullScreen(window:frame(), screen:frame())
@@ -20,15 +20,13 @@ end
 function arrangeApplicationsWindows(applications)
     for applicationName, screensConfig in pairs(applications) do
         local app = hs.application.find(applicationName)
-        if app == nil then
-            break
-        end
-
-        for _, screenOptions in ipairs(screensConfig) do
-            local screen = getScreen(screenOptions.screen)
-            if screen ~= nil then
-                positionApplication(app, screen, screenOptions)
-                break
+        if app ~= nil then
+            for _, screenOptions in ipairs(screensConfig) do
+                local screen = getScreen(screenOptions.screen)
+                if screen ~= nil then
+                    positionApplication(app, screen, screenOptions)
+                    break
+                end
             end
         end
     end
@@ -49,7 +47,7 @@ HOME_LEFT_SCREEN = 'DELL P2720DC (1)'
 OFFICE_RIGHT_SCREEN = 'TBD'
 MACBOOK_SCREEN = 'Built-in Retina Display'
 
-local applications = {
+applications = {
     ["Finder"] = { { screen = HOME_CENTER_SCREEN }, { screen = OFFICE_RIGHT_SCREEN }, { screen = MACBOOK_SCREEN } },
     ["Google Chrome"] = { { screen = HOME_CENTER_SCREEN }, { screen = OFFICE_RIGHT_SCREEN }, { screen = MACBOOK_SCREEN } },
     ["Postman"] = { { screen = HOME_LEFT_SCREEN, position = RIGHT_HALF }, { screen = OFFICE_RIGHT_SCREEN, position = RIGHT_HALF }, { screen = MACBOOK_SCREEN } },
