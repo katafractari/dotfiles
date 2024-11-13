@@ -54,13 +54,13 @@ applications = {
     ["kitty"] = { { screen = HOME_LEFT_SCREEN }, { screen = MACBOOK_SCREEN } },
     ["IntelliJ IDEA"] = { { screen = HOME_CENTER_SCREEN }, { screen = OFFICE_RIGHT_SCREEN }, { screen = MACBOOK_SCREEN } },
     ["Signal"] = { { screen = MACBOOK_SCREEN, position = RIGHT_HALF } },
-    ["Slack"] = { { screen = HOME_LEFT_SCREEN, position = RIGHT_HALF }, { screen = MACBOOK_SCREEN } },
+    ["Slack"] = { { screen = HOME_LEFT_SCREEN, position = RIGHT_HALF }, { screen = MACBOOK_SCREEN, position = LEFT_HALF } },
     ["Spotify"] = { { screen = MACBOOK_SCREEN } },
     ["Obsidian"] = { { screen = HOME_LEFT_SCREEN, position = RIGHT_HALF }, { screen = MACBOOK_SCREEN } },
     ["1Password"] = { { screen = HOME_CENTER_SCREEN, position = LEFT_HALF }, { screen = MACBOOK_SCREEN } },
     ["zoom.us"] = { { screen = MACBOOK_SCREEN } },
     ["Firefox"] = { { screen = HOME_LEFT_SCREEN }, { screen = OFFICE_RIGHT_SCREEN }, { screen = MACBOOK_SCREEN } },
-    ["WhatsApp"] = { { screen = MACBOOK_SCREEN, position = LEFT_HALF } },
+    ["WhatsApp"] = { { screen = MACBOOK_SCREEN, position = RIGHT_HALF } },
     ["ChatGPT"] = { { screen = HOME_LEFT_SCREEN, position = RIGHT_HALF }, { screen = MACBOOK_SCREEN } },
     ["Miro"] = { { screen = HOME_CENTER_SCREEN }, { screen = OFFICE_RIGHT_SCREEN }, { screen = MACBOOK_SCREEN } }
 }
