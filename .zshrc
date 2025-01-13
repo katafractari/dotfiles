@@ -106,3 +106,6 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # Quarkus
 source <(quarkus completion)
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/rok/.cache/lm-studio/bin"
