@@ -66,3 +66,11 @@ applications = {
 }
 
 hs.hotkey.bind({ "alt" }, "j", function() arrangeApplicationsWindows(applications) end)
+
+screenWatcher = hs.screen.watcher.new(function()
+    hs.timer.doAfter(3, function()
+        moveAndResizeWindows()
+    end)
+end)
+
+screenWatcher:start()
