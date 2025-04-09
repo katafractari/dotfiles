@@ -1,6 +1,6 @@
 DefaultBrowser = "FIREFOX"
 CustomBrowserPath = "/opt/homebrew/bin/firefox"
-CustomSSOBrowserPath = "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox"
+CustomSSOBrowserPath = "/Applications/Firefox.app/Contents/MacOS/firefox"
 Ordering = ""
 ExportCredentialSuffix = ""
 
