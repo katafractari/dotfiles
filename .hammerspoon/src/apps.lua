@@ -11,7 +11,6 @@ hyperShortcuts = {
     l = "Obsidian",
 --     k = "Google Meet",
     z = "zoom.us",
-    a = "Audials Play",
     c = "WhatsApp",
     a = "Firefox",
     o = "Miro",
