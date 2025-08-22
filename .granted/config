@@ -2,7 +2,8 @@ DefaultBrowser = "FIREFOX"
 CustomBrowserPath = "/opt/homebrew/bin/firefox"
 CustomSSOBrowserPath = "/Applications/Firefox.app/Contents/MacOS/firefox"
 Ordering = ""
-ExportCredentialSuffix = ""
+ExportCredentialSuffix = "session"
+CredentialProcessAutoLogin = true
 
 [Keyring]
   Backend = "keychain"

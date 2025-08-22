@@ -1,3 +1,5 @@
+#zmodload zsh/zprof
+
 autoload -Uz compinit
 compinit -i
 
@@ -27,7 +29,6 @@ antigen bundle docker
 antigen bundle brew
 antigen bundle aws
 antigen bundle colored-man-pages
-antigen bundle lukechilds/zsh-nvm
 antigen bundle akarzim/zsh-docker-aliases.git
 antigen bundle MichaelAquilina/zsh-you-should-use
 
@@ -109,3 +110,10 @@ source <(quarkus completion)
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/rok/.cache/lm-studio/bin"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#zprof

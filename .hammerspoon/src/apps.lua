@@ -2,7 +2,7 @@
 
 hyperShortcuts = {
     e = "Finder",
-    r = "Postman",
+    r = "Bruno",
     t = "kitty",
     i = "IntelliJ IDEA",
     s = "Spotify",
@@ -15,6 +15,7 @@ hyperShortcuts = {
     a = "Firefox",
     o = "Miro",
     g = "ChatGPT",
+--     n = "Gemini",
     d = "1Password"
 --     h = "scrcpy"
 }
