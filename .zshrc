@@ -1,7 +1,12 @@
 #zmodload zsh/zprof
 
+# Smarter completion initialization
 autoload -Uz compinit
-compinit -i
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
 
 ZSH_DISABLE_COMPFIX=true
 
@@ -9,9 +14,9 @@ ZSH_DISABLE_COMPFIX=true
 export EDITOR='vim'
 
 # Powerlevel10k instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # Antigen
 source ~/Workspace/personal/dotfiles/antigen.zsh
@@ -21,7 +26,6 @@ antigen use oh-my-zsh
 # Antigen Bundles
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle Aloxaf/fzf-tab
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle git
 antigen bundle git-flow
 antigen bundle npm
@@ -31,6 +35,7 @@ antigen bundle aws
 antigen bundle colored-man-pages
 antigen bundle akarzim/zsh-docker-aliases.git
 antigen bundle MichaelAquilina/zsh-you-should-use
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Antigen Theme
 antigen theme romkatv/powerlevel10k
@@ -84,6 +89,8 @@ fi
 
 # zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # Disable MacOS's "Save/Restore Shell State" feature
 export SHELL_SESSIONS_DISABLE=1
@@ -113,7 +120,7 @@ export PATH="$PATH:/Users/rok/.cache/lm-studio/bin"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 
 #zprof
