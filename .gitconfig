@@ -2,9 +2,16 @@
 	path = ~/.gitconfig.user
 [push]
 	default = simple
+	followTags = true
 [core]
 	autocrlf = input
 [pull]
 	rebase = false
 [init]
 	defaultBranch = master
+[color]
+	ui = auto
+[pager]
+	diff = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+	diffFilter = diff-so-fancy --patch
