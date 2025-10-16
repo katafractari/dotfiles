@@ -50,7 +50,7 @@ else
     export HOMEBREW_PREFIX=/usr/local
 fi
 
-export PATH=$HOMEBREW_PREFIX/bin:$PATH
+export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Vi mode
