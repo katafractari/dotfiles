@@ -63,3 +63,19 @@ https://github.com/kevinSuttle/macOS-Defaults
 ## Extra Fonts
 
 Fonts used: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+
+## Installing Git Pre-commit Hook for Secret Prevention
+
+To prevent accidentally committing secrets to git, install the gitleaks pre-commit hook:
+
+1. **Install gitleaks** (if not already installed):
+   ```bash
+   brew install gitleaks
+   ```
+
+2. **Install the pre-commit hook** in this repository:
+   ```bash
+   ./install-gitleaks-hook.sh
+   ```
+
+The hook will automatically scan staged files for secrets before each commit and block the commit if any are found. This provides an extra layer of protection beyond Bruno's secret marking feature.
